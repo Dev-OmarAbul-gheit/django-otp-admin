@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 
-## [0.1.0] — Unreleased
+## [1.0.0] — Unreleased
 
 ### Added
 - `OTPAdminSite` — drop-in replacement for Django's default `AdminSite`
@@ -25,3 +25,11 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Matching HTML templates styled to the Unfold purple palette
 - Full docstrings and inline comments throughout
 - Unit tests for all utility functions
+
+
+## [1.0.0] — 2026-03-29
+
+### Fixed
+- Corrected package version in __init__.py
+- Corrected build-backend in pyproject.toml
+- update back-link URLs to use 'admin:login' instead of 'admin:admin_email_login'
