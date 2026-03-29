@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name            = "django-otp-admin"
+version         = "1.0.0"
+description     = "A drop-in Django admin site that replaces the default login with a two-step email OTP flow, with optional Unfold UI support."
+readme          = "README.md"
+license         = { file = "LICENSE" }
+requires-python = ">=3.6"
+
+authors = [
+    { name = "Omar Khaled Abulgheit", email = "omarabulgheit@gmail.com" }
+]
+
+keywords = [
+    "django", "admin", "otp", "two-factor", "2fa",
+    "email", "authentication", "redis", "unfold",
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Framework :: Django :: 2.2",
+    "Framework :: Django :: 3.0",
+    "Framework :: Django :: 3.1",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.0",
+    "Framework :: Django :: 4.1",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+]
+
+dependencies = [
+    "django>=2.2",
+    "django-redis>=4.9",
+]
+
+[project.optional-dependencies]
+# Install with: pip install django-otp-admin[unfold]
+unfold = ["django-unfold"]
+
+dev = [
+    "pytest",
+    "pytest-django",
+    "factory-boy",
+    "fakeredis",
+]
+
+[project.urls]
+Homepage      = "https://github.com/your-username/django-otp-admin"
+Repository    = "https://github.com/your-username/django-otp-admin"
+Documentation = "https://github.com/your-username/django-otp-admin#readme"
+"Bug Tracker" = "https://github.com/your-username/django-otp-admin/issues"
+Changelog     = "https://github.com/your-username/django-otp-admin/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["django_otp_admin*"]
+
+[tool.setuptools.package-data]
+django_otp_admin = ["templates/admin/*.html"]
