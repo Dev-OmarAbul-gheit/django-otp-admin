@@ -178,7 +178,7 @@
 </head>
 <body>
 
-  <a class="back-link" href="{% url 'admin:admin_email_login' %}">
+  <a class="back-link" href="{% url 'admin:login' %}">
     <svg viewBox="0 0 20 20" fill="currentColor">
       <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0L3.586 10l4.707-4.707a1 1 0 011.414 1.414L7.414 9H15a1 1 0 010 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
     </svg>
@@ -238,7 +238,7 @@
       </button>
     </form>
 
-    <a class="restart-link" href="{% url 'admin:admin_email_login' %}">
+    <a class="restart-link" href="{% url 'admin:login' %}">
       {% trans "Didn't receive a code?" %} <span>{% trans "Send again" %}</span>
     </a>
 
