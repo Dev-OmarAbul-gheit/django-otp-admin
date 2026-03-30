@@ -340,7 +340,6 @@ class OTPAdminSite(_Base):
         # call Django's login() which attaches the user to the session
         # and rotates the session key to prevent session fixation.
         request.session.pop("otp_user_id", None)
-        user.backend = "django.contrib.auth.backends.ModelBackend"
         login(request, user)
 
         logger.info("Admin user pk=%s successfully authenticated via OTP", user.id)

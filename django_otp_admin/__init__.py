@@ -20,5 +20,5 @@
 #   from django_otp_admin.site import otp_admin_site
 #   path("admin/", otp_admin_site.urls),
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 __all__ = ["__version__"]
